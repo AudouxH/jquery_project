@@ -1,0 +1,72 @@
+.collapsible {
+  border: 0;
+}
+.collapsible li > {
+  /* margin: 0 24px; */
+  border: 0;
+}
+.collapsible li.active {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  margin: 16px -16px;
+  background: #ffffff;
+  border: 1px solid #000000;
+}
+.collapsible li.active .collapsible-body {
+  display: block;
+}
+/*modal*/
+.lean-overlay {
+  z-index: 1002;
+  display: none;
+  opacity: 0;
+  cursor: pointer;
+}
+.lean-overlay.active {
+  opacity: 0.5;
+}
+.modal.bottom-sheet {
+  z-index: 1003;
+  display: block;
+  opacity: 1;
+  bottom: -100%;
+}
+.modal.bottom-sheet.active {
+  bottom: 0;
+}
+
+/* ajout de la class header open pour ouvrir les collasible en gros*/
+.collapsible-header-open {
+  width: 104%;
+  margin-left: -2%;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+/* la meme chose pour le body des collasible */
+.collapsible-body-open {
+  display: block;
+  width: 104%;
+  margin-left: -2%;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  background-color: white;
+}
+
+/* creation d'une class pour deplacer la list quand elle est afficher car elle avait un petit decalage et pour l'afficher aussi*/
+.list_open {
+  display: block !important;
+  margin: 0px 0px 0px 10px;
+}
+
+/* creation de la class active pour add une bande orange en bas du boutton tabs et mettre le titre en noir */
+.active {
+  color: black !important;
+  border-bottom: 10px solid orange !important;
+}
+
+/* creation de cette class pour le button de la list en bas a droite car il prenait la bande orange du .active */
+.no-active {
+  border-bottom: 0px solid orange !important;
+}
